@@ -1,0 +1,108 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h3>Add new Listing</h3>
+      <form
+        method="post"
+        action="/listings"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div>
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            name="title"
+            placeholder="Enter title"
+            class="form-control"
+            required
+          />
+        </div>
+        <div>
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            type="textarea"
+            name="description"
+            placeholder="Enter description"
+            class="form-control"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label for="image" class="form-label">Upload Listing Image</label>
+          <input
+            type="file"
+            name="listing[image]"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <label for="price" class="form-label">Price</label>
+            <input
+              type="text"
+              name="price"
+              placeholder="Enter price"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label for="country" class="form-label">country</label>
+            <input
+              type="text"
+              name="country"
+              placeholder="Enter country"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="location" class="form-label">Locatin</label>
+          <input
+            type="text"
+            name="location"
+            placeholder="Enter location"
+            class="form-control"
+            required
+          />
+        </div>
+        <!-- <br /> -->
+        <div class="mt-1">
+            Select category
+          <div class="input-group mb-3 mt-1">
+            <label class="input-group-text" for="inputGroupSelect01"
+              >Options</label
+            >
+            <select class="form-select" id="inputGroupSelect01" name="category">
+              <option selected>Choose...</option>
+              <option value="Trending">Trending</option>
+              <option value="Rooms">Rooms</option>
+              <option value="Iconic cities">Iconic cities</option>
+              <option value="Mountain">Mountain</option>
+              <option value="Castles">Castles</option>
+              <option value="Amazing pools">Amazing pools</option>
+              <option value="Camping">Camping</option>
+              <option value="Farm">Farm</option>
+              <option value="Arctic">Arctic</option>
+              <option value="Boats">Boats</option>
+              <option value="Domes">Domes</option>
+            </select>
+          </div>
+        </div>
+
+        <br />
+        <button class="btn btn-dark submit-btn">submit</button>
+      </form>
+    </div>
+  </div>
+  <br />
+</body>
